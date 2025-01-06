@@ -1,0 +1,287 @@
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body 
+{
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #121212, #1e1e1e);
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #232323, #3a3a3a);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    font-size: 2rem;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    font-weight: bold;
+    text-shadow: 0.0625rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #232323, #444444);
+    color: #eaf4f8;
+    margin-top: auto;
+    width: 100%;
+    font-size: 0.8rem;
+    letter-spacing: 0.0625rem;
+}
+
+section#wholeDocument {
+    background-color: rgba(255, 255, 255, 0.1); /*tu popraw tło*/
+    width: 98%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+#creator {
+    gap: 0.5rem;
+    padding: 1rem;
+
+    width: 100%;
+    height: 100%; 
+    box-sizing: border-box;
+
+    background-color: #1f1f1f;
+    border: 0.125rem solid #333333;
+    border-radius: 1rem;
+    padding: 0.9375rem;
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#attackbox {
+    z-index: 100;
+    bottom:0rem;
+    position: fixed;
+
+    gap: 0.5rem;
+    padding: 0.3rem;
+
+    background: linear-gradient(90deg, #232323, #444444);
+    color: #eaf4f8;
+    width: 100%;
+
+    display:flex;
+
+    border-radius: 1rem;
+    border: 0.125rem solid #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#contMon
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.boxMon
+{
+    background-color: #1f1f1f;
+    border: 0.125rem solid #333333;
+    border-radius: 0.375rem;
+    padding: 0rem;
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    flex: 1 1 calc(32% - 0.5rem);
+    max-width: calc(100% - 0.5rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.subBox {
+    display: flex;
+    flex-direction: row;
+    text-align: center;   
+    margin: 0rem 0;
+    gap: 0.8rem;
+    margin: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.subAttBox{
+    padding: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3125rem;
+}
+
+/*======================================================================*/
+
+.attackBtn {
+    background-color: #a00;
+    color: white;
+    border: none;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attackBtn:hover {
+    background-color: #e00;
+}
+
+.healBtn {
+    background-color: #00a800   ;
+    color: white;
+    border: none;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.healBtn:hover {
+    background-color: #00f000;
+}
+
+#NameInput {
+    flex: 7;
+    width: 70%;
+}
+
+#HpInput {
+    flex: 3;
+    width: 30%;
+}
+
+input {
+    background-color: #1f1f1f;
+    color: #d4d4d4;
+    border: 0.0625rem solid #333333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    box-shadow: inset 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #5c80d1;
+    outline: none;
+    box-shadow: 0 0 0.5rem rgba(92, 128, 209, 0.6);
+}
+
+input[type="checkbox"] {
+    font-size: 0.5rem;
+    appearance: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #1f1f1f;
+    border: 0.125rem solid #333333;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #5c80d1;
+    border-color: #5c80d1;
+    box-shadow: 0 0 0.5rem rgba(92, 128, 209, 0.6);
+}
+
+input[type="checkbox"]:hover {
+    border-color: #ffffff;
+}
+
+input[type="radio"] {
+    appearance: none; 
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #1f1f1f;
+    border: 0.125rem solid #333333;
+    border-radius: 50%; /* Okrągły kształt */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="radio"]:checked {
+    background-color: #5c80d1;
+    border-color: #5c80d1;
+    box-shadow: 0 0 0.5rem rgba(92, 128, 209, 0.6);
+}
+
+input[type="radio"]:hover {
+    border-color: #ffffff;
+}
+
+button {
+    background-color: #1f1f1f;
+    color: #d4d4d4;
+    border: 0.0625rem solid #333333;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+button:hover {
+    border-color: #5c80d1;
+    box-shadow: 0 0 0.5rem rgba(92, 128, 209, 0.6);
+}
+
+.tblBody {
+    width: 100%;
+    border-collapse: collapse;
+    gap: 0rem;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.tblBody td {
+    padding: 0rem;
+    gap: 0rem;
+    margin: 0rem;
+    text-align: center;
+    color: #d4d4d4;
+}
+
+/*======================================================================*/
+
+@media (max-width: 800px)
+{
+    .boxMon
+    {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
