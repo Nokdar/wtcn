@@ -1,41 +1,36 @@
 <!DOCTYPE html> 
-
-
-
-<!--   DODAJ PRZYCISK IGNOROWANIE PANCERZA i IGNOROWANIE POŁOWY PANCERZA    -->
-
-
-
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wucher Counter</title>
+    <title>Wyźmin</title>
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4081/4081896.png">
     <link rel="stylesheet" href="witcherlook.css">
 </head>
 <body>
     <header>
-        Wucher Counter
+        Wyźmin
     </header>
 <section id="wholeDocument">
     <section id="creator">
-        <h2>Monster Creator</h2>
+        <h2>Stwórz Potwora</h2>
         <div class="input-group">
-            <input type="text" id="NameInput" placeholder="Monster name...">
-            <input type="number" id="HpInput" placeholder="HP number...">
+            <input type="text" id="NameInput" placeholder="Nazwa Potwora...">
+            <input type="number" id="HpInput" placeholder="Ilość PZ...">
+            <input type="number" id="ArmorInput" placeholder="Ilość Wyp...">
         </div>
         <div class="input-group">
                 <input class="AddIn" type="checkbox" id="RedCIn" value="C"> red C
                 <input class="AddIn" type="checkbox" id="RedKIn" value="K"> red K
                 <input class="AddIn" type="checkbox" id="RedMIn" value="M"> red M
-                <input class="AddIn" type="checkbox" id="RedZIn" value="Z"> red Z
-                <input class="AddIn" type="radio" name="RedMetal" id="RedZeIn" value="Ze"> red Iron
-                <input class="AddIn" type="radio" name="RedMetal" id="RedSrIn" value="Sr"> red Silver
+                <input class="AddIn" type="checkbox" id="RedZIn" value="Z"> red Ż
+                <input class="AddIn" type="radio" name="RedMetal" id="RedZeIn" value="Ze"> red Żelazo
+                <input class="AddIn" type="radio" name="RedMetal" id="RedSrIn" value="Sr"> red Srebro
         </div>
-        <button id="SubmitBtn">Submit Monster</button>        
+        <button id="SubmitBtn">Gotowe</button>        
     </section>
     <section id="contMon">
+        <!--
         <div class="boxMon">
             <div class="subBox" style="width: 3rem;">
                 <input type="radio" name="ChooseMon" id=cstBoxMon.checkID value="FakeMon1" style="left: 0rem;"></input>
@@ -102,6 +97,7 @@
             <button id="deleteBtn">X</button>
             </div>
         </div>
+        -->
     </section>
 </section>
     <footer>
@@ -110,19 +106,21 @@
     
     <section id="attackbox">
         <div class="subAttBox">
-            <button class="attackBtn" style="width: 49%; min-width: 5rem;">Attack</button>
-            <button class="healBtn" style="width: 22%; min-width: 5rem">Heal</button>
-            <button id="cancelBtn" style="width: 22%; min-width: 5rem">Cancel</button>
+            <button class="attackBtn" id="attackBtn" style="width: 49%; min-width: 5rem;">Atakuj</button>
+            <button class="healBtn" id="healBtn" style="width: 22%; min-width: 5rem">Lecz</button>
+            <button id="cancelBtn" style="width: 22%; min-width: 5rem">Anuluj</button>
 
-                <input type="number" id="AttHpInput" placeholder="HP number..." style="width: 100%">
+                <input type="number" id="DmgInput" placeholder="Ilość Obrażeń..." style="width: 100%">
 
             <div class="input-group">
                     <input type="radio" name="AttType" id="AttCIn" value="C"> C
                     <input type="radio" name="AttType" id="AttKIn" value="K"> K
                     <input type="radio" name="AttType" id="AttMIn" value="M"> M
-                    <input type="radio" name="AttType" id="AttZIn" value="Z"> Z
-                    <input type="radio" name="AttMetal" id="AttZeIn" value="Ze"> Iron
-                    <input type="radio" name="AttMetal" id="AttSrIn" value="Sr"> Silver
+                    <input type="radio" name="AttType" id="AttZIn" value="Z"> Ż
+                    <input type="radio" name="AttMetal" id="AttZeIn" value="Ze"> Żelazo
+                    <input type="radio" name="AttMetal" id="AttSrIn" value="Sr"> Srebro
+                    <input type="radio" name="AttIgn" id="AttIgnAll" value="All"> Ign(1)
+                    <input type="radio" name="AttIgn" id="AttIgnHalf" value="Half"> Ign(1/2)
             </div>
         </div>
         <div class="subAttBox">
@@ -131,30 +129,30 @@
                     <td>
                     </td>
                     <td>
-                        Head<br> <input type="radio" name="BodyLoc" id="radioHead" value="H">
+                        Głowa<br> <input type="radio" name="BodyLoc" id="radioHead" value="H">
                     </td>
                     <td>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="BodyLoc" id="radioArmR" value="AR"><br>ArmR
+                        <input type="radio" name="BodyLoc" id="radioArmR" value="AR"><br>RP
                     </td>
                     <td>
-                        Corpus<br> <input type="radio" name="BodyLoc" id="radfioCorpus" value="C">
+                        Korpus<br> <input type="radio" name="BodyLoc" id="radfioCorpus" value="C">
                     </td>
                     <td>
-                        <input type="radio" name="BodyLoc" id="radioArmL" value="AL"><br>ArmL
+                        <input type="radio" name="BodyLoc" id="radioArmL" value="AL"><br>RL
                     </td>
                 </tr>
                 </table>
                 <table class="tblBody">
                 <tr>
                     <td>
-                        <input type="radio" name="BodyLoc" id="radioLegL" value="LR"><br>LegR
+                        <input type="radio" name="BodyLoc" id="radioLegR" value="LR"><br>NP
                     </td>
                     <td>
-                        <input type="radio" name="BodyLoc" id="radioLegL" value="LL"><br>LegL
+                        <input type="radio" name="BodyLoc" id="radioLegL" value="LL"><br>NL
                     </td>
                 </tr>
             </table>

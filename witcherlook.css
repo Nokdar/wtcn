@@ -175,14 +175,20 @@ section#wholeDocument {
 }
 
 #NameInput {
-    flex: 7;
-    width: 70%;
+    flex: 6;
+    width: 60%;
 }
 
 #HpInput {
-    flex: 3;
-    width: 30%;
+    flex: 2;
+    width: 20%;
 }
+
+#ArmorInput {
+    flex: 2;
+    width: 20%;
+}
+
 
 input {
     background-color: #1f1f1f;
